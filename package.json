@@ -1,5 +1,6 @@
 {
   "name": "design-os-gemini",
+  "description": "A modified version of Design OS that leverages the official Gemini CLI for cost-efficient product planning and design.",
   "private": false,
   "version": "1.0.0",
   "type": "module",

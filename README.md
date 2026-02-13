@@ -28,13 +28,17 @@ The original Design OS is an incredible tool, but it relies on Claude Code. This
 
 ### 1. Prerequisites
 
-You must have the [Gemini CLI](https://github.com/google/generative-ai-python) (or a similar compatible CLI tool that supports `-p` and `--output-format json`) installed and configured on your system.
+You must have the official [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed and configured on your system.
 
 ```bash
-# Example (if using the standard gemini-cli)
-pip install google-generativeai
-# Ensure gemini command is in your PATH
+# Install globally with npm
+npm install -g @google/gemini-cli
+
+# Or run instantly with npx (no installation required)
+# Note: The bridge server expects a global 'gemini' command by default.
 ```
+
+The bridge server in this project specifically uses the `gemini -p "..." --output-format json` pattern, which is fully supported by the official CLI.
 
 ### 2. Clone and Install Dependencies
 
