@@ -63,7 +63,7 @@ This will start:
 ---
 
 ## Created by Brian Casel @ Builder Methods
-### Modified for Gemini by [Your Name / Username]
+### Modified for Gemini by [Mahdi / rootrager]
 
 Original tool created by Brian Casel, the creator of [Builder Methods](https://buildermethods.com). This fork adapts the intelligence engine to use Gemini for enhanced accessibility and cost-efficiency.
 
