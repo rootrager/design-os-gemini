@@ -1,54 +1,73 @@
-<img width="1280" height="640" alt="Design OS" src="https://github.com/user-attachments/assets/a9c04258-7b9a-45b6-8475-3431cdf5dbe9" />
+<img width="1280" height="640" alt="Design OS - Gemini Edition" src="https://github.com/user-attachments/assets/a9c04258-7b9a-45b6-8475-3431cdf5dbe9" />
+
+# Design OS - Gemini Edition
 
 ## The missing design process between your idea and your codebase.
 
-[Design OS](https://buildermethods.com/design-os) is a product planning and design tool that helps you define your product vision, structure your data model, design your UI, and export production-ready components for implementation. Rather than jumping straight into code, you work through a guided process that captures what you're building and why—then hands off everything your coding agent needs to build it right.
+**Design OS - Gemini Edition** is a modified, cost-efficient version of [Design OS](https://buildermethods.com/design-os). It helps you define your product vision, structure your data model, design your UI, and export production-ready components using **Gemini CLI** instead of Claude Code.
 
-## The Problem
+Rather than jumping straight into code, you work through a guided process that captures what you're building and why—then hands off everything your coding agent needs to build it right.
 
-AI coding tools are incredible at building fast. But the results often miss the mark. You describe what you want, the agent builds *something*, but it's not what you envisioned. The UI looks generic. Features get half-implemented. You spend as much time fixing and redirecting as you would have spent building.
+## Why Gemini Edition?
 
-**The core issue:** we're asking coding agents to figure out what to build *and* build it simultaneously. Design decisions get made on the fly, buried in code, impossible to adjust without starting over. There's no spec. No shared understanding. No source of truth for what "done" looks like.
+The original Design OS is an incredible tool, but it relies on Claude Code. This version was created to:
+- **Reduce Costs**: Leverage the generous free tier of Google's Gemini models via the CLI.
+- **Local Integration**: Use a local bridge server to communicate with the `gemini-cli` tool directly.
+- **Persian Support**: Optimized for developers working in multilingual (RTL/LTR) environments.
 
 ## The Design OS Process
-
-Design OS powers a guided design and architecture process. You + AI, working together through structured steps:
 
 1. **Product Planning** — Define your vision, break down your roadmap, and model your data
 2. **Design System** — Choose colors, typography, and design your application shell
 3. **Section Design** — For each feature area: specify requirements, generate sample data, and design the screens
 4. **Export** — Generate a complete handoff package for implementation
 
-Each step is a conversation. The AI asks questions, you provide direction, and together you shape a product that matches your vision—before any implementation begins.
-
 ---
 
-## Documentation & Installation
+## Installation & Setup
 
-Docs, installation, usage, & best practices 👉 [It's all here](https://buildermethods.com/design-os)
+### 1. Prerequisites
 
----
+You must have the [Gemini CLI](https://github.com/google/generative-ai-python) (or a similar compatible CLI tool that supports `-p` and `--output-format json`) installed and configured on your system.
 
-## Support, Training & Community
+```bash
+# Example (if using the standard gemini-cli)
+pip install google-generativeai
+# Ensure gemini command is in your PATH
+```
 
-For official support, training, and community as you use Design OS—for yourself or with your team, consider joining _Builder Methods Pro_. You'll get access to Brian Casel (the creator) for questions, a community of builders using Design OS, plus all Builder Methods workshops and training on AI-first development.
+### 2. Clone and Install Dependencies
 
-👉 [Join Builder Methods Pro](https://buildermethods.com/pro)
+```bash
+git clone https://github.com/yourusername/design-os-gemini.git
+cd design-os-gemini
+npm install
+```
 
----
+### 3. Running the Project
 
-## Follow updates & releases
+Design OS requires both the client and the bridge server to be running:
 
-Read the [changelog](CHANGELOG.md)
+```bash
+npm run dev
+```
 
-[Subscribe to be notified of major new releases of Design OS](https://buildermethods.com/design-os)
+This will start:
+- **Client**: `http://localhost:5173` (Vite)
+- **Bridge Server**: `http://localhost:3001` (Express bridge to Gemini CLI)
 
 ---
 
 ## Created by Brian Casel @ Builder Methods
+### Modified for Gemini by [Your Name / Username]
 
-Created by Brian Casel, the creator of [Builder Methods](https://buildermethods.com), where Brian helps professional software developers and teams build with AI.
+Original tool created by Brian Casel, the creator of [Builder Methods](https://buildermethods.com). This fork adapts the intelligence engine to use Gemini for enhanced accessibility and cost-efficiency.
 
-Get Brian's free resources on building with AI:
-- [Builder Briefing newsletter](https://buildermethods.com)
-- [YouTube](https://youtube.com/@briancasel)
+- [Original Design OS](https://buildermethods.com/design-os)
+- [Gemini Documentation](https://ai.google.dev/docs)
+
+---
+
+## License
+
+MIT License - See [LICENSE](LICENSE) for details.

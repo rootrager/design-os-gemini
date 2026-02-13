@@ -95,3 +95,5 @@ export interface ProductData {
   designSystem: DesignSystem | null
   shell: ShellInfo | null
 }
+
+export type Project = ProductData

@@ -5,6 +5,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { AppLayout } from '@/components/AppLayout'
 import { loadProductData, hasExportZip, getExportZipUrl } from '@/lib/product-loader'
 import { getAllSectionIds, getSectionScreenDesigns } from '@/lib/section-loader'
+import { GeminiGenerator } from './GeminiGenerator'
 
 export function ExportPage() {
   const productData = useMemo(() => loadProductData(), [])
@@ -140,6 +141,9 @@ export function ExportPage() {
                     <code className="text-sm font-mono text-stone-800 dark:text-stone-200">
                       /export-product
                     </code>
+                  </div>
+                  <div className="mt-4">
+                    <GeminiGenerator />
                   </div>
                 </div>
               )}

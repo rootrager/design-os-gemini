@@ -21,3 +21,13 @@ dist/
 # Logs
 *.log
 npm-debug.log*
+
+# Design OS User Data (Private)
+product/
+product-plan/
+product-plan.zip
+.claude/
+
+# Generated Screen Designs (Project Specific)
+src/sections/*/
+!src/sections/.gitkeep
